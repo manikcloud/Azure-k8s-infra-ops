@@ -1,6 +1,6 @@
 variable "acr_name" {
   description = "Name for the Azure Container Registry"
-  default     = "myacrregistry" 
+  default     = "myacrregistry"
 }
 
 variable "resource_group_location" {

@@ -40,3 +40,15 @@ output "kube_config" {
   value     = azurerm_kubernetes_cluster.k8s.kube_config_raw
   sensitive = true
 }
+
+output "vnet_id" {
+  value = azurerm_virtual_network.manik_vnet.id
+}
+
+output "public_subnet_id" {
+  value = azurerm_subnet.manik_public_subnet.id
+}
+
+output "private_subnet_id" {
+  value = azurerm_subnet.manik_private_subnet.id
+}
