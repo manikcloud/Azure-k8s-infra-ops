@@ -189,7 +189,8 @@ The project is structured as follows:
 
 - We will write Groovy scripts to connect these scanning and commenting tools to our pipeline, making them an integral and reusable part of our DevOps process.
 
-Please note that these enhancements will further improve the overall quality and maintainability of the project. Take the time you need to write the necessary scripts and configurations to implement these features effectively.
+- **Please note that due to the need for additional setup time for JIRA and CD integration (3.3. Jenkins CI/CD), the CD process's triggering from JIRA release tasks may be delayed. We appreciate your understanding, and we'll update this README when this integration is completed.**
+
 
 
 
