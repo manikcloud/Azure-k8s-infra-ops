@@ -60,8 +60,8 @@ This README document provides instructions and guidelines for implementing a Dev
 
 ### 2.8. Cloud Platform
 1. The cloud platform for this project is Azure.
-
-## 3. Approach <a name="approach"></a>
+---
+## 3. Resoution Approach <a name="approach"></a>
 
 To resolve the problem statement, follow these high-level steps:
 
@@ -118,6 +118,34 @@ Before starting the project, ensure you have the following prerequisites:
 - Java application source code.
 - JIRA for issue tracking and release management.
 - Code scanning tools integrated into the CI/CD pipelines.
+
+
+---
+# DevOps Project README
+
+## Approach
+
+The project is structured as follows:
+
+### Day 1
+
+- Created a simple Java application named "manik-calc."
+- Set up an Azure account.
+- Used Terraform to provision an Azure Container Registry (ACR) and an Azure Kubernetes Service (AKS) cluster.
+- Configured Visual Studio Code (VSCode) with GitHub integration and connected it to the AKS cluster.
+- Deployed the "manik-calc" application to the AKS cluster.
+- Conducted testing to ensure the setup is working as expected.
+
+### Day 2
+
+- Focused on setting up a Jenkins cluster on the AKS.
+- Installed Helm on the AKS cluster.
+- Launched Jenkins using Helm.
+- Exposed Jenkins through a Load Balancer service.
+- Started basic testing jobs within Jenkins.
+- Addressed permission issues between Jenkins and AKS.
+- Removed the default agent in Jenkins.
+- Configured a pod as a Jenkins slave using the Kubernetes plugin.
 
 
 
