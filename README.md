@@ -121,9 +121,9 @@ Before starting the project, ensure you have the following prerequisites:
 
 
 ---
-# DevOps Project README
 
-## Approach
+
+## Project compltion Daywise Agenda
 
 The project is structured as follows:
 
@@ -146,6 +146,29 @@ The project is structured as follows:
 - Addressed permission issues between Jenkins and AKS.
 - Removed the default agent in Jenkins.
 - Configured a pod as a Jenkins slave using the Kubernetes plugin.
+
+### Day 3
+
+- Built several Docker images required for the CI/CD pipeline, including:
+  - `manik-calculator`
+  - `docker:dind` (Docker in Docker)
+  - `docker-devops-tools` (including `kubectl` and `helm`)
+  - `docker-maven`
+- Pushed these Docker images to the Azure Container Registry (ACR) created by Terraform on Day 1.
+
+- Created a new repository for the `manik-calculator` application and integrated it with the Jenkins job. Encountered and resolved some issues related to image pushing, ensuring the CI process is functioning correctly.
+
+- Moved on to setting up Continuous Deployment (CD). Initially, performed manual deployments of the application to the Kubernetes cluster. Later, introduced a DevOps tool Docker container in the CD pipeline. This container includes `kubectl` and `helm`, ensuring that future deployments are automated.
+
+- Achieved the primary goal of the project, running a Jenkins cluster on the AKS platform, with all CI/CD jobs functioning as expected.
+
+- As a final step, decoupled the project into three separate repositories:
+  1. **Terraform OPS Repository:** [GitHub Repository](https://github.com/manikcloud/Azure-k8s-infra-ops)
+  2. **CICD Git Flow Repository:** [GitHub Repository](https://github.com/manikcloud/AzureK8s-CICD-Flow)
+  3. **Application Repository:** Seperate repository for the `manik-calculator` application, decoupled from Terraform: [GitHub Repository](https://github.com/manikcloud/microservices-calculator)
+
+This structure enhances project organization and maintainability.
+
 
 
 
