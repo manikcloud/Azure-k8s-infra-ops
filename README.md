@@ -167,48 +167,29 @@ The project is structured as follows:
   2. **CICD Git Flow Repository:** [GitHub Repository](https://github.com/manikcloud/AzureK8s-CICD-Flow)
   3. **Application Repository:** Seperate repository for the `manik-calculator` application, decoupled from Terraform: [GitHub Repository](https://github.com/manikcloud/microservices-calculator)
 
-This structure enhances project organization and maintainability.
-
-
-### Continuing Modularization and Multi-Cluster Setup
-
-- After successfully setting up the CI/CD flow as mentioned in the previous section, the next phase involves modularizing the Terraform code.
-
-- The goal here is to create separate Terraform modules for the Azure Kubernetes Service (AKS), Azure Container Registry (ACR), and the virtual network (VNet) to achieve the requirements mentioned earlier:
-
-#### 3.2 Write Terraform code to define the 3-tier network and its components.
-#### Use Terraform to provision a Kubernetes cluster in Azure
-
-- Due to limitations in the free Azure account, two separate AKS clusters have been created:
-  1. **aks-ops-cluster:** Dedicated to hosting the Jenkins cluster.
-  2. **aks-app-cluster:** Dedicated to deploying and running the application.
-
-- The next steps involve launching the Jenkins cluster in the `aks-ops-cluster` and repeating a similar setup for Jenkins CI/CD on the `aks-app-cluster`.
-
-- The CI process will build and test the application, while the CD process will deploy the application to the `aks-app-cluster`.
-
-- This approach ensures a clean separation of concerns between infrastructure management (`aks-ops-cluster`) and application deployment (`aks-app-cluster`).
-
 ### Upcoming Steps: Code Scanning and Commenting
 
 - In the next phase of this project, we will focus on enhancing the code quality and documentation by adding code scanning and automated commenting to the CI/CD pipeline.
 
 #### Code Scanning
-- We will integrate code scanning tools, such as SonarQube, and static code analysis tools like PMD or JaCoCo, into the CI pipeline.
+- Building upon the earlier requirement (2.4. Code Scanning), we will integrate code scanning tools, such as SonarQube, and static code analysis tools like PMD or JaCoCo, into the CI pipeline.
+
+- As specified in the project requirements, we will perform code scanning before creating the Docker images to ensure that the code adheres to standards and is free from vulnerabilities.
 
 - SonarQube will provide detailed code quality reports, including code smell, security vulnerabilities, and maintainability metrics.
 
 - PMD or JaCoCo plugins will analyze the codebase for style violations, potential bugs, and test coverage.
 
 #### Automated Commenting
-- To maintain code quality, we will set up automated commenting in the CI/CD pipeline.
+- Additionally, to meet the requirement for project modularity and reusability (2.5. Project Modularity and Reusability), we will ensure that the pipeline is modular and parameterized for future reusability.
 
-- The pipeline will generate comments on code reviews, pull requests, or commits, highlighting issues, providing suggestions, and ensuring that the code adheres to best practices.
+- Modularization will make it easier to integrate code scanning and commenting components seamlessly into the CI/CD pipeline and any future projects.
 
-- Automated commenting helps developers quickly identify and address code-related issues during the development process.
+- Automated commenting helps developers quickly identify and address code-related issues during the development process, enhancing project maintainability.
 
-- We will write Groovy scripts to connect these scanning and commenting tools to our pipeline, making them an integral part of our DevOps process.
+- We will write Groovy scripts to connect these scanning and commenting tools to our pipeline, making them an integral and reusable part of our DevOps process.
 
 Please note that these enhancements will further improve the overall quality and maintainability of the project. Take the time you need to write the necessary scripts and configurations to implement these features effectively.
+
 
 
