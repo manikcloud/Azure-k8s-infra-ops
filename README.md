@@ -26,37 +26,37 @@ This README document provides instructions and guidelines for implementing a Dev
 
 ## 2. Problem Statement <a name="problem-statement"></a>
 
-### 2.1. Docker Image Creation
-1. Write a Dockerfile for a Java application.
-2. Package the Java application into a Docker image.
-3. Build the Docker image.
-4. Push the Docker image to Azure Container Registry (ACR) using Terraform.
+### 2.1. Docker Image Creation 
+1. Write a Dockerfile for a Java application.             **DONE**
+2. Package the Java application into a Docker image.             **DONE**
+3. Build the Docker image.             **DONE**
+4. Push the Docker image to Azure Container Registry (ACR) using Terraform.             **DONE**
 
 ### 2.2. Terraform Infrastructure Setup
-1. Write Terraform code to create a 3-tier network and its components.
-2. Create a Kubernetes cluster using Terraform.
+1. Write Terraform code to create a 3-tier network and its components.             **DONE**
+2. Create a Kubernetes cluster using Terraform.             **DONE**
 
 ### 2.3. Jenkins CI/CD
-1. Configure Jenkins CI on a separate cluster with build agents.
-2. Create Dockerfiles for build agents required for the above project.
-3. Create separate CI and CD pipelines.
-4. Trigger CI when a Pull Request is Merged in Source Control Management (SCM).
-5. Trigger CD from a JIRA release task.
+1. Configure Jenkins CI on a separate cluster with build agents.             **DONE**
+2. Create Dockerfiles for build agents required for the above project.             **DONE**
+3. Create separate CI and CD pipelines.             **DONE**
+4. Trigger CI when a Pull Request is Merged in Source Control Management (SCM).             **DONE**
+5. Trigger CD from a JIRA release task.             **NOT-DONE**
 
 ### 2.4. Code Scanning
-1. Scan the code for standards and vulnerabilities.
-2. Perform code scanning before creating the Docker images.
+1. Scan the code for standards and vulnerabilities.             **Work in Progress**
+2. Perform code scanning before creating the Docker images.         **Work in Progress**
 
 ### 2.5. Project Modularity and Reusability
-1. Ensure the pipeline is modular and parameterized for future reusability.
+1. Ensure the pipeline is modular and parameterized for future reusability.         **Work in Progress**
 
 ### 2.6. Documentation
-1. Prepare a README for the DevOps team to implement this project.
+1. Prepare a README for the DevOps team to implement this project.             **DONE**
 2. List all assumptions.
-3. Code should be well-documented, and all variables used should be documented.
+3. Code should be well-documented, and all variables used should be documented.             **DONE**
 
 ### 2.7. Git Repository
-1. Upload all project files to an appropriate folder in a Git repository and share the link.
+1. Upload all project files to an appropriate folder in a Git repository and share the link.             **DONE**
 
 ### 2.8. Cloud Platform
 1. The cloud platform for this project is Azure.
