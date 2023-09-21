@@ -46,6 +46,6 @@ helm install my-jenkins .
 
 
 ### Directory Structure
-- 'terraform-root': Contains Terraform scripts for infrastructure provisioning.
-- 'modules': Terraform modules for ACR, AKS, and VNet.
-- 'helm-chart's: Contains Helm charts for Jenkins.
+- `terraform-root`: Contains Terraform scripts for infrastructure provisioning.
+- `'modules'`: Terraform modules for ACR, AKS, and VNet.
+- `helm-chart's`: Contains Helm charts for Jenkins.
