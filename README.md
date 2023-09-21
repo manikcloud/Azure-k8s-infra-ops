@@ -60,6 +60,7 @@ This README document provides instructions and guidelines for implementing a Dev
 
 ### 2.8. Cloud Platform
 1. The cloud platform for this project is Azure.
+
 ---
 ## 3. Resoution Approach <a name="approach"></a>
 
@@ -74,7 +75,7 @@ To resolve the problem statement, follow these high-level steps:
 ### 3.2. Terraform Infrastructure Setup
 - Write Terraform code to define the 3-tier network and its components.
 - Use Terraform to provision a Kubernetes cluster in Azure.
-**Terraform code:** [GitHub Repository](https://github.com/manikcloud/Azure-k8s-infra-ops/tree/tf-module)
+- **Terraform code:** [GitHub Repository](https://github.com/manikcloud/Azure-k8s-infra-ops/tree/tf-module)
 
 ### 3.3. Jenkins CI/CD
 - Configure Jenkins on a separate cluster.
