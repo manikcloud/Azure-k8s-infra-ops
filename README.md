@@ -1,2 +1,123 @@
 # Azure-k8s-infra-ops
 Azure-k8s-infra-ops
+
+# DevOps Project README
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Problem Statement](#problem-statement)
+3. [Approach](#approach)
+4. [Assumptions](#assumptions)
+5. [Prerequisites](#prerequisites)
+6. [Project Structure](#project-structure)
+7. [Instructions](#instructions)
+   - [Docker Image Creation](#docker-image-creation)
+   - [Terraform Infrastructure Setup](#terraform-infrastructure-setup)
+   - [Jenkins CI/CD Pipeline](#jenkins-cicd-pipeline)
+   - [Code Scanning](#code-scanning)
+8. [Documentation](#documentation)
+9. [Contact Information](#contact-information)
+
+---
+
+## 1. Introduction <a name="introduction"></a>
+
+This README document provides instructions and guidelines for implementing a DevOps project on the Azure cloud platform. The project involves creating a Docker image for a Java application, setting up infrastructure using Terraform, creating a Kubernetes cluster, configuring Jenkins CI/CD pipelines, and performing code scanning for standards and vulnerabilities.
+
+## 2. Problem Statement <a name="problem-statement"></a>
+
+### 2.1. Docker Image Creation
+1. Write a Dockerfile for a Java application.
+2. Package the Java application into a Docker image.
+3. Build the Docker image.
+4. Push the Docker image to Azure Container Registry (ACR) using Terraform.
+
+### 2.2. Terraform Infrastructure Setup
+1. Write Terraform code to create a 3-tier network and its components.
+2. Create a Kubernetes cluster using Terraform.
+
+### 2.3. Jenkins CI/CD
+1. Configure Jenkins CI on a separate cluster with build agents.
+2. Create Dockerfiles for build agents required for the above project.
+3. Create separate CI and CD pipelines.
+4. Trigger CI when a Pull Request is Merged in Source Control Management (SCM).
+5. Trigger CD from a JIRA release task.
+
+### 2.4. Code Scanning
+1. Scan the code for standards and vulnerabilities.
+2. Perform code scanning before creating the Docker images.
+
+### 2.5. Project Modularity and Reusability
+1. Ensure the pipeline is modular and parameterized for future reusability.
+
+### 2.6. Documentation
+1. Prepare a README for the DevOps team to implement this project.
+2. List all assumptions.
+3. Code should be well-documented, and all variables used should be documented.
+
+### 2.7. Git Repository
+1. Upload all project files to an appropriate folder in a Git repository and share the link.
+
+### 2.8. Cloud Platform
+1. The cloud platform for this project is Azure.
+
+## 3. Approach <a name="approach"></a>
+
+To resolve the problem statement, follow these high-level steps:
+
+### 3.1. Docker Image Creation
+- Write a Dockerfile for the Java application.
+- Use Docker to package the application into an image.
+- Build the Docker image.
+- Use Terraform to push the image to Azure ACR.
+
+### 3.2. Terraform Infrastructure Setup
+- Write Terraform code to define the 3-tier network and its components.
+- Use Terraform to provision a Kubernetes cluster in Azure.
+
+### 3.3. Jenkins CI/CD
+- Configure Jenkins on a separate cluster.
+- Create Dockerfiles for build agents.
+- Set up CI and CD pipelines with Jenkins.
+- Trigger CI when Pull Requests are merged.
+- Trigger CD from JIRA release tasks.
+
+### 3.4. Code Scanning
+- Integrate code scanning tools into the CI/CD pipelines.
+- Perform code scanning before creating Docker images.
+
+### 3.5. Project Modularity and Reusability
+- Modularize the CI/CD pipelines.
+- Parameterize pipeline configurations for reusability.
+
+### 3.6. Documentation
+- Create a detailed README document with step-by-step instructions.
+- List all assumptions made during the project.
+
+### 3.7. Git Repository
+- Organize and upload project files to a Git repository.
+
+## 4. Assumptions <a name="assumptions"></a>
+
+- The Java application source code is available.
+- Access to an Azure subscription with appropriate permissions.
+- Docker and Terraform are installed on the local machine.
+- Jenkins is set up and accessible on a separate cluster.
+- JIRA is used for issue tracking and release management.
+- Code scanning tools are integrated into the CI/CD pipelines.
+- Necessary credentials and secrets are securely managed.
+
+## 5. Prerequisites <a name="prerequisites"></a>
+
+Before starting the project, ensure you have the following prerequisites:
+
+- Azure subscription and access credentials.
+- Docker installed locally.
+- Terraform installed locally.
+- Access to Jenkins on a separate cluster.
+- Java application source code.
+- JIRA for issue tracking and release management.
+- Code scanning tools integrated into the CI/CD pipelines.
+
+
+
