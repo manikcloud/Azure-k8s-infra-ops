@@ -41,7 +41,7 @@ output "aks_ops_kube_config" {
   sensitive   = true
 }
 
-output "aks_apps_kube_config" {
+output "aks_app_kube_config" {
   description = "The Kubernetes config for connecting to the AKS apps cluster"
   value       = module.aks_app.aks_kube_config
   sensitive   = true
