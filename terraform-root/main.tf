@@ -25,21 +25,21 @@ module "acr_app" {
 }
 
 
-# module "vnet-ops" {
-#   source              = "./modules/vnet"
-#   resource_group_name = azurerm_resource_group.rg.name
-#   location            = var.location
-#   vnet_name           = "manik-ops-vnet"
-# }
+module "vnet-ops" {
+  source              = "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = var.location
+  vnet_name           = "manik-ops-vnet"
+}
 
-# module "vnet-app" {
-#   source              = "./modules/vnet"
-#   resource_group_name = azurerm_resource_group.rg.name
-#   location            = var.location
-#   vnet_name           = "manik-app-vnet"
-# }
+module "vnet_app" {
+  source              = "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = var.location
+  vnet_name           = "manik-app-vnet"
+}
 
-# module "aks-ops" {
+# module "aks_ops" {
 #   source              = "./modules/aks"
 #   resource_group_name = azurerm_resource_group.rg.name
 #   location            = var.location
@@ -54,5 +54,5 @@ module "acr_app" {
 #   location            = var.location
 #   aks_name            = "manik-app-aks-cluster"
 #   parent_id           = azurerm_resource_group.rg.id
-#   vnet_subnet_id      = module.vnet-app.subnet_ids[0] # Assuming you want the first subnet for AKS
+#   vnet_subnet_id      = module.vnet_app.subnet_ids[0] # Assuming you want the first subnet for AKS
 # }
