@@ -1,13 +1,13 @@
 output "app_acr_login_server" {
-  value = module.acr-app.acr_login_server
+  value = module.acr_app.acr_login_server
 }
 
 output "app_acr_id" {
-  value = module.acr-app.acr_id
+  value = module.acr_app.acr_id
 }
 
 output "app_acr_admin_username" {
-  value = module.acr-app.acr_admin_username
+  value = module.acr_app.acr_admin_username
 }
 
 # output "vnet_ops_id" {
