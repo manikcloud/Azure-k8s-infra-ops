@@ -1,6 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
-
+**/.azure/*
 # .tfstate files
 *.tfstate
 *.tfstate.*
@@ -33,3 +33,4 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
