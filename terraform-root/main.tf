@@ -26,14 +26,14 @@ module "acr_app" {
 
 
 module "vnet_ops" {
-  source =   "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
+  source              = "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   vnet_name           = var.vnet_ops
 }
 
 module "vnet_app" {
-  source =   "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
+  source              = "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   vnet_name           = var.vnet_app
@@ -45,7 +45,7 @@ module "vnet_app" {
 #   location            = var.location
 #   aks_name            = var.aks_ops_name
 #   parent_id           = azurerm_resource_group.rg.id
-#   vnet_subnet_id      = module.vnet-ops.subnet_ids[0] # Assuming you want the first subnet for AKS
+#   vnet_subnet_id      = module.vnet_ops.subnet_ids[0] # Assuming you want the first subnet for AKS
 # }
 
 # module "aks-app" {

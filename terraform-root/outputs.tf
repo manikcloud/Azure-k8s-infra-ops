@@ -16,12 +16,12 @@ output "acr_ops_admin_username" {
 
 output "vnet_ops_id" {
   description = "ID of the ops VNet"
-  value       = module.vnet-ops.vnet_id
+  value       = module.vnet_ops.vnet_id
 }
 
 # output "vnet_ops_subnet_ids" {
 #   description = "IDs of the subnets in the ops VNet"
-#   value       = module.vnet-ops.subnet_ids
+#   value       = module.vnet_ops.subnet_ids
 # }
 
 output "vnet_app_id" {
