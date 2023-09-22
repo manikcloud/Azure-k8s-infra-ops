@@ -17,7 +17,7 @@ module "acr-ops" {
 }
 
 module "acr-app" {
-  source              = "./modules/acr"
+  source              = var.source_acr
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   acr_name            = var.acr_app_name
