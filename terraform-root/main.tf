@@ -25,18 +25,18 @@ module "acr_app" {
 }
 
 
-module "vnet-ops" {
+module "vnet_ops" {
   source              = "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
-  vnet_name           = var.vnet_ops
+  vnet_name           = var.aks_vnet_ops
 }
 
 module "vnet_app" {
   source              = "git::https://github.com/manikcloud/Azure-k8s-infra-ops.git//terraform-root/modules/vnet"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
-  vnet_name           = var.vnet_app
+  vnet_name           = var.aks_vnet_app
 }
 
 # module "aks_ops" {
