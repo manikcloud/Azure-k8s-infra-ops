@@ -39,20 +39,20 @@ module "vnet_app" {
   vnet_name           = var.vnet_app
 }
 
-# module "aks_ops" {
-#   source              = "./modules/aks"
-#   resource_group_name = azurerm_resource_group.rg.name
-#   location            = var.location
-#   aks_name            = var.aks_ops_name
-#   parent_id           = azurerm_resource_group.rg.id
-#   vnet_subnet_id      = module.vnet_ops.subnet_ids[0] # Assuming you want the first subnet for AKS
-# }
+module "aks_ops" {
+  source              = "./modules/aks"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = var.location
+  aks_name            = var.aks_name_ops
+  parent_id           = azurerm_resource_group.rg.id
+  vnet_subnet_id      = module.vnet_ops.subnet_ids[0] # Assuming you want the first subnet for AKS
+}
 
-# module "aks-app" {
-#   source              = "./modules/aks"
-#   resource_group_name = azurerm_resource_group.rg.name
-#   location            = var.location
-#   aks_name            = "manik-app-aks-cluster"
-#   parent_id           = azurerm_resource_group.rg.id
-#   vnet_subnet_id      = module.vnet_app.subnet_ids[0] # Assuming you want the first subnet for AKS
-# }
+module "aks_app" {
+  source              = "./modules/aks"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = var.location
+  aks_name            = var.aks_name_app
+  parent_id           = azurerm_resource_group.rg.id
+  vnet_subnet_id      = module.vnet_app.subnet_ids[0] # Assuming you want the first subnet for AKS
+}

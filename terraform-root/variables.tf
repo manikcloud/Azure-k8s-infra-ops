@@ -3,16 +3,17 @@ variable "location" {
   type    = string
 }
 
-# variable "aks_cluster_ops" {
-#   default     = "aks-ops"
-#   description = "Cluster name"
-#   type        = string
-# }
-# variable "aks_cluster_app" {
-#   default     = "aks-app"
-#   description = "Cluster name"
-#   type        = string
-# }
+variable "aks_name_ops" {
+  default     = "aks_ops"
+  description = "aks cluster ops"
+  type        = string
+}
+variable "aks_name_app" {
+  default     = "aks_app"
+  description = "aks cluster app"
+  type        = string
+}
+
 variable "acr_ops_name" {
   default     = "aksacrops"
   type        = string
