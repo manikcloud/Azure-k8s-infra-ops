@@ -12,7 +12,7 @@ variable "location" {
 variable "acr_name" {
   description = "Name for the Azure Container Registry"
   type        = string
-  default     = "manik-aks-acr"
+  # default     = "manik-aks-acr"
 }
 
 variable "acr_sku" {

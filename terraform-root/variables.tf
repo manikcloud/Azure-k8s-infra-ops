@@ -25,12 +25,12 @@ variable "acr_app_name" {
   description = "acr name app"
 }
 variable "vnet_ops" {
-  default     = aks_vnet_ops
+  default     = "vnet_ops"
   type        = string
   description = " app vnet name"
 }
 variable "vnet_app" {
-  default     = aks_vnet_app
+  default     = "vnet_app"
   type        = string
   description = " app vnet name"
 }
